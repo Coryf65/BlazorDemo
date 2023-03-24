@@ -1,6 +1,9 @@
 # BlazorDemo
  Playing with Blazor
 
+ - [Razor Docs](https://learn.microsoft.com/en-us/aspnet/core/mvc/views/razor?view=aspnetcore-7.0)
+ - [Blazor Docs](https://learn.microsoft.com/en-us/aspnet/core/blazor/?view=aspnetcore-7.0)
+
  ## What is Blazor?
 
  Blazor is a framework designed to use C# to write the front end to the back end.
@@ -79,3 +82,16 @@ example:
     }
 }
 ```
+
+### Icons
+
+The icons used are from [open-iconic](https://icon-sets.iconify.design/oi/page-1.html)
+
+you can search available icons on that site to find ones to use.
+
+### Parameters
+
+
+
+### Binding Data
+

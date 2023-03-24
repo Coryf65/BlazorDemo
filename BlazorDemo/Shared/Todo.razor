@@ -1,0 +1,45 @@
+﻿@page "/todo"
+@using BlazorDemo.Data;
+
+<PageTitle>Todo</PageTitle>
+
+<h1>Todo items: (@_todos.Count(todo => !todo.IsDone))</h1>
+
+<ul>
+    @foreach (var todo in _todos)
+    {
+        <li>
+            <input type="checkbox" @bind="todo.IsDone" />
+            @todo.Title @_dateDue
+        </li>
+    }
+</ul>
+
+<input placeholder="Something todo" @bind="_newTodo" @bind:event="oninput" />
+<input placeholder="DueDate" @bind="_dateDue" @bind:format="MM-dd-yyyy" />
+<button @onclick="AddTodo">Add</button>
+
+@if (!string.IsNullOrEmpty(_newTodo))
+{
+    <p>@_newTodo Due: @_dateDue?.ToShortDateString()</p>
+}
+
+@code {
+    private List<TodoItem> _todos = new();
+    private string _newTodo = string.Empty;
+    private DateTime? _dateDue = null;
+
+    private void AddTodo()
+    {
+        if (string.IsNullOrWhiteSpace(_newTodo))
+            return;
+
+        _todos.Add(new TodoItem
+        {
+            Title = _newTodo,
+            DateDue = _dateDue
+        });
+        
+        _newTodo = string.Empty;    
+    }
+}
