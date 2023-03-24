@@ -53,7 +53,9 @@
  ### Notes about Blazor
 
 - Components are built and called using the route `@page"/name"` or placed in the page using `<name Parameter="something"/>`
-- Components can have multiple routes example:
+- Components can have multiple routes so either `/counter` or `/count` would work.
+
+example:
 ```Razor
 @page "/counter"
 @page "/count"
