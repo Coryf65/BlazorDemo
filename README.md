@@ -54,7 +54,7 @@
 
 - Components are built and called using the route `@page"/name"` or placed in the page using `<name Parameter="something"/>`
 - Components can have multiple routes example:
-```C#
+```Razor
 @page "/counter"
 @page "/count"
 
