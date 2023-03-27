@@ -91,6 +91,13 @@ you can search available icons on that site to find ones to use.
 
 ### Parameters
 
+Pass using the routes
+
+```Razor
+@page "/Message/{value}"
+```
+
+
 
 
 ### Binding Data
